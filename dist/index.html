@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nur der HSV – mit einem Blick auf das Hamburger Rathaus.">
+  <title>Nur der HSV</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #f5f7fa;
+      color: #111d2e;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    main { width: min(100% - 40px, 820px); margin: 0 auto; padding: 56px 0 40px; }
+    h1 { margin: 0 0 32px; font-size: clamp(2rem, 7vw, 5rem); text-align: center; letter-spacing: -.04em; }
+    figure { margin: 0; }
+    .photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      background: #e1e9ef;
+      box-shadow: 0 16px 48px #10203916;
+    }
+    figcaption { padding: 20px 4px 0; line-height: 1.6; }
+    .place { display: block; font-size: 1.15rem; font-weight: 700; }
+    .credit { display: block; margin-top: 5px; color: #536075; font-size: .8rem; }
+    a { color: #24547c; text-underline-offset: 3px; }
+    a:hover { color: #112e49; }
+    a:focus-visible { outline: 3px solid #24547c; outline-offset: 4px; border-radius: 2px; }
+    @media (max-width: 540px) {
+      main { width: calc(100% - 32px); padding-top: 32px; }
+      h1 { margin-bottom: 24px; }
+      .photo { border-radius: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Nur der HSV</h1>
+    <figure>
+      <img class="photo"
+        src="https://upload.wikimedia.org/wikipedia/commons/1/17/Hamburg_Rathausmarkt_und_Rathaus.jpg"
+        alt="Das Hamburger Rathaus mit seiner reich verzierten Sandsteinfassade und dem grünen Turm am Rathausmarkt."
+        width="3151" height="3151" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+      <figcaption>
+        <span class="place">Das Hamburger Rathaus</span>
+        <span class="credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:Hamburg_Rathausmarkt_und_Rathaus.jpg">Arnoldius · Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · unverändert</span>
+      </figcaption>
+    </figure>
+  </main>
+</body>
+</html>

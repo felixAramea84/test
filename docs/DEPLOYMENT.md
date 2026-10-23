@@ -25,3 +25,19 @@ Version und erfolgreicher Veröffentlichungsstatus wurden über Sites gelesen. D
 6. Deployment-Status bis zum Endzustand prüfen; URL, Hauptfunktion, Assets, Navigation, Konsole und Mobilansicht testen. HANDOFF, TODO und Session-Log aktualisieren, committen und Remote-Verifikation durchführen.
 
 **Sperre:** Ohne belegtes GitHub-Backup und rekonstruierbaren bisherigen Sites-Stand kein automatisches Sites-Update. Hier ist keine automatische Deploy-Pipeline eingerichtet. [Rollback](ROLLBACK.md) beachten.
+
+## Aktualisierung 2026-10-23 – bestätigte Zuordnung und Backup
+
+„Test-Website“ wird im aktuellen Auftrag bewusst diesem GitHub-Projekt zugeordnet. Das vorhandene Sites-Quell-Remote wurde authentifiziert geklont; HEAD entspricht exakt der veröffentlichten Version-1-SHA. Es enthält nur .openai/hosting.json und eine leere dist/index.html. Die historische Abweichung zur GitHub-Seite ist damit erklärt.
+
+Pre-Deployment-Backup auf GitHub: `3c7de0c47a901482c57ff257c8ba9c3db49c2066`, Branch `feature/rathaus-foto`. Beide Deployment-Dateien sind dort unverändert gesichert. Aus der verifizierten Quell-SHA wurde ein tar-Archiv rekonstruiert, dessen Inhalte byteweise mit git show verglichen wurden. Manifest: [Pre-Rathaus](../backups/2026-10-23-pre-rathaus.json). Der alte Sediment-Download war nicht auflösbar; die exakten statischen Dateien sind über Git rekonstruierbar. Kein Live-Restore ausgeführt.
+
+Lokales Packaging: `python3 scripts/prepare-static.py`, danach `python3 scripts/validate.py`; Archiv enthält ausschließlich .openai/hosting.json und dist/index.html. Vor Veröffentlichung Zielcommit auf GitHub UND das konfigurierte Sites-Quell-Remote pushen und Remote-SHAs verifizieren. Publikum bleibt ausschließlich der bisherige Eigentümer. Sites-Version und Deployment-Ergebnis werden nach Veröffentlichung in HANDOFF und Session-Log ergänzt.
+
+Der Sites-Workflow-Helper ist in dieser Ausführungsumgebung nicht installiert und auch nicht als Skill-Ressource verfügbar. Fallback: gewöhnliches Git mit kurzlebiger Authentifizierung nur im Prozessspeicher sowie natives Sites-Speichern/Veröffentlichen mit lokalem tar-Archiv. Keine Zugangsdaten auf Platte oder in Git.
+
+## Veröffentlichtes Rathaus-Update
+
+Version 2: appgprj_6adb5adde3a0819186797112638e6c1d~appgver_2313f71bd6f48191bdd15c1e74f67984. Quellcommit 914d8f89e301d0b4ef341fda682c8e42cf70e46e. Deployment appgdep_6adb673811d88191b6c535b53c291497 succeeded, 2026-10-23 15:55:18 CEST. Lokaler HTTP-/Archiv-Test PASS; direkte Live-HTTP-Prüfung URLError; visuelle Bildprüfung nicht verfügbar. GitHub-Quellstand auf feature/rathaus-foto, PR #1 offen; main wegen abgelehntem Direkt-Push unverändert. Dokumentationscommit nach dem Release braucht keine erneute Sites-Veröffentlichung.
+
+Der Nutzer hat anschließend den Merge von PR #1 in main ausdrücklich beauftragt. Die Integration erfolgt über den PR-Merge; die Merge-SHA wird abschließend remote verifiziert und im Session-Abschlussbericht genannt. Der veröffentlichte Sites-Quellcommit bleibt unverändert 914d8f89e301d0b4ef341fda682c8e42cf70e46e.

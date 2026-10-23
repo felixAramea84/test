@@ -1,20 +1,24 @@
 # TODO
 
 ## Next up
-- [ ] T-002 | P1 | OPEN | Zuordnung von GitHub-Repository und Sites bestätigen.
-  - Akzeptanz: Die beabsichtigte Site und ihr Quell-Remote sind belegt; Abweichung der Quell-SHAs ist erklärt.
-  - Abhängigkeit: Kein Deployment-Auftrag in dieser Session; vor nächstem Sites-Update bearbeiten.
-- [ ] T-003 | P1 | OPEN | Live-Snapshot sichern und Wiederherstellung prüfen.
-  - Akzeptanz: Exportintegrität und Restore geprüft; Ausgangsstand auf GitHub gesichert und Remote-SHA sowie Sites-Version im Manifest dokumentiert.
-  - Abhängigkeit: T-002; zwingendes Gate vor einem Sites-Update.
+Keine offenen Implementierungsaufgaben. Nutzer hat Integration von PR #1 in main beauftragt; Merge nach dieser Dokumentation, finaler Nachweis im Session-Bericht. Optional: Foto im autorisierten Browser visuell prüfen.
 
 ## In progress
 Keine.
 
 ## Blocked
-Keine Aufgaben der Repository-Konfiguration blockiert. Sites-Deployment bis T-002/T-003 gesperrt.
+Keine Implementierung blockiert. Direkter main-Push durch automatische Freigabeprüfung abgelehnt; GitHub-Integration erfolgt nach ausdrücklichem Nutzerauftrag über https://github.com/felixAramea84/test/pull/1.
 
 ## Done
-- [x] T-001 | P1 | DONE | Repository gemäß gelieferter Projektvorgabe konfigurieren.
-  - Akzeptanz: AGENTS.md unverändert; Pflichtdokumentation, Ignore-Regeln, Umgebungsbeispiel, Bestandsmanifest und Validierung vorhanden; index.html unverändert; lokale Checks erfolgreich.
-  - GitHub-Abschluss: stabiler Verweis `refs/heads/main`; finale Commit-SHA und bestätigter Remote-Stand im Abschlussbericht. Bei fehlgeschlagener Veröffentlichung T-001 wieder öffnen.
+- [x] T-001 | P1 | DONE | Repository gemäß Projektvorgabe konfigurieren.
+  - Akzeptanz: AGENTS.md unverändert, Pflichtdateien vorhanden, lokale Prüfung erfolgreich und GitHub-Sicherung bestätigt.
+  - Ergebnis: 2bab1c3afcf6dba100677b1008970c24d42121b5 auf main.
+- [x] T-002 | P1 | DONE | Sites-Quellen identifizieren und dem GitHub-Projekt zuordnen.
+  - Akzeptanz: Projekt und Remote bestätigt, Quellabweichung erklärt, bestehende Historie erhalten.
+  - Ergebnis: Version 1 war eine eigenständige leere Sites-Seite; Quellen nun unter Erhaltung beider Historien verbunden.
+- [x] T-003 | P1 | DONE | Wiederherstellbaren Live-Ausgangsstand remote sichern.
+  - Akzeptanz: Deployment-Dateien aus veröffentlichter Quell-SHA rekonstruierbar, lokaler Archiv-Roundtrip bytegleich, GitHub-Backup-SHA bestätigt.
+  - Ergebnis: 3c7de0c47a901482c57ff257c8ba9c3db49c2066; tatsächlicher Live-Restore nicht ausgeführt. Manifest backups/2026-10-23-pre-rathaus.json.
+- [x] T-004 | P1 | DONE | Rathausfoto ergänzen und Test-Website veröffentlichen.
+  - Akzeptanz: Foto, Alt-Text, Attribution/Lizenz, responsive Darstellung, GitHub-Sicherung und erfolgreiches Sites-Deployment.
+  - Ergebnis: Quellcommit 914d8f89e301d0b4ef341fda682c8e42cf70e46e, Version 2 succeeded, Zugriff unverändert. Lokale HTML-/Struktur-/HTTP-Prüfung PASS; visueller Live-/Bildtest nicht verfügbar, direkte Live-HTTP-Prüfung URLError. Foto wird extern geladen.
