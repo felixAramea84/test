@@ -35,3 +35,7 @@ Pre-Deployment-Backup auf GitHub: `3c7de0c47a901482c57ff257c8ba9c3db49c2066`, Br
 Lokales Packaging: `python3 scripts/prepare-static.py`, danach `python3 scripts/validate.py`; Archiv enthält ausschließlich .openai/hosting.json und dist/index.html. Vor Veröffentlichung Zielcommit auf GitHub UND das konfigurierte Sites-Quell-Remote pushen und Remote-SHAs verifizieren. Publikum bleibt ausschließlich der bisherige Eigentümer. Sites-Version und Deployment-Ergebnis werden nach Veröffentlichung in HANDOFF und Session-Log ergänzt.
 
 Der Sites-Workflow-Helper ist in dieser Ausführungsumgebung nicht installiert und auch nicht als Skill-Ressource verfügbar. Fallback: gewöhnliches Git mit kurzlebiger Authentifizierung nur im Prozessspeicher sowie natives Sites-Speichern/Veröffentlichen mit lokalem tar-Archiv. Keine Zugangsdaten auf Platte oder in Git.
+
+## Veröffentlichtes Rathaus-Update
+
+Version 2: appgprj_6adb5adde3a0819186797112638e6c1d~appgver_2313f71bd6f48191bdd15c1e74f67984. Quellcommit 914d8f89e301d0b4ef341fda682c8e42cf70e46e. Deployment appgdep_6adb673811d88191b6c535b53c291497 succeeded, 2026-10-23 15:55:18 CEST. Lokaler HTTP-/Archiv-Test PASS; direkte Live-HTTP-Prüfung URLError; visuelle Bildprüfung nicht verfügbar. GitHub-Quellstand auf feature/rathaus-foto, PR #1 offen; main wegen abgelehntem Direkt-Push unverändert. Dokumentationscommit nach dem Release braucht keine erneute Sites-Veröffentlichung.
