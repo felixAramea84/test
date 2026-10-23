@@ -36,4 +36,6 @@ Die Strukturprüfung kontrolliert Pflichtdateien, relative Markdown-Verweise und
 GitHub: https://github.com/felixAramea84/test, Hauptbranch `main`.
 Änderungen bevorzugt über Feature-Branch, Review und kontrollierte Zusammenführung. Vor Push Diff, Secrets, Prüfungen und Zielbranch kontrollieren; danach Remote-SHA prüfen.
 
-Sites und GitHub sind derzeit nicht nachweislich synchronisiert. Die Kandidatin „Test-Website“ ist in den Deployment-Dokumenten inventarisiert; die Repo-Zuordnung bleibt offen. Kein automatisches Deployment eingerichtet. `.openai/hosting.json` erst nach bestätigter Zuordnung anlegen. Vor jeder Sites-Änderung gelten die Backup-Gates aus `AGENTS.md`.
+Sites-Projekt „Test-Website“ ist über `.openai/hosting.json` zugeordnet. `index.html` bleibt die kanonische Quelle. `python3 scripts/prepare-static.py` erzeugt die identische Deployment-Datei `dist/index.html`. GitHub und das separate Sites-Quell-Remote erhalten vor Veröffentlichung denselben identifizierten Stand. Keine Veröffentlichung bei gewöhnlichen GitHub-Pushes. Details und Backup-Gates in `docs/DEPLOYMENT.md` und `AGENTS.md`.
+
+Das Rathausfoto wird unverändert von Wikimedia Commons geladen; es benötigt Internetzugang zu `upload.wikimedia.org`. Urheber: Arnoldius, Lizenz CC BY-SA 4.0; Bildquelle und Lizenz sind auf der Seite verlinkt. Die Ausführungsumgebung erlaubt keinen Bilddownload von Wikimedia; die Website bindet das verifizierte Original direkt ein.

@@ -20,3 +20,7 @@ Für die Kandidatin „Test-Website“ existiert die gespeicherte Version 1 (`ap
 Die Sites-Werkzeuge bieten Veröffentlichung gespeicherter Versionen. Eigentümer-/Editorrechte, aktuelle Zugriffsregeln und erneut geprüfte IDs sind erforderlich. Eine frühere bekannte Version kann erneut veröffentlicht werden, sofern sie verfügbar ist und die Backup-Gates erfüllt sind. Quellarchiv, Codeabgleich und tatsächlicher Restore sind noch nicht verifiziert. Der GitHub-Ausgangscommit darf nicht als identisch mit der Sites-Live-Version angenommen werden.
 
 Vor einer Wiederveröffentlichung: Site-Zuordnung bestätigen, aktuellen Stand sichern, richtige gespeicherte Version prüfen und Freigabe im Auftragskontext klären. Danach Deployment-Status und Live-Smoke-Test ausführen, Ergebnis dokumentieren. Kein erfolgreicher Rollback ohne diese Prüfung. Datenbank-/Content-Backups separat ergänzen, sobald solche Komponenten existieren.
+
+## Verifizierter Rückkehrpunkt vor Rathausfoto
+
+GitHub-Commit `3c7de0c47a901482c57ff257c8ba9c3db49c2066` enthält .openai/hosting.json und dist/index.html der leeren veröffentlichten Version 1. Die Dateien wurden aus dem Sites-Quell-HEAD rekonstruiert und byteweise geprüft. Native gespeicherte Version 1 kann erneut veröffentlicht werden; alternativ die beiden Dateien dieses GitHub-Commits paketieren. Kein tatsächlicher Live-Restore durchgeführt. Bilddatei selbst ist eine unveränderte externe Wikimedia-Ressource und kein veränderter Sites-Datensatz.
