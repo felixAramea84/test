@@ -1,0 +1,27 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+# Dependencies and generated artifacts
+node_modules/
+dist/
+build/
+coverage/
+__pycache__/
+*.py[cod]
+.venv/
+# Local tools and temporary data
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+work/
+# Large backup payloads; keep manifests in backups/
+backups/*.zip
+backups/*.tar
+backups/*.tar.gz
+backups/*.bundle

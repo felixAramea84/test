@@ -1,0 +1,26 @@
+{
+  "recorded_at": "2026-10-23 15:41 CEST",
+  "repository": "https://github.com/felixAramea84/test",
+  "branch": "main",
+  "baseline_commit": "d0b6ec1d45667ff5e6d73851cf3d4163962e69a9",
+  "baseline_verified_on_github": true,
+  "kind": "inventory_reference_only",
+  "sites": {
+    "association": "unconfirmed",
+    "project_id": "appgprj_6adb5adde3a0819186797112638e6c1d",
+    "version_number": 1,
+    "version_id": "appgprj_6adb5adde3a0819186797112638e6c1d~appgver_2b3adb6efc1c81919846bd9a91b52a59",
+    "source_commit": "7868b213ea3282c2699531842e0478a09195b02e",
+    "deployment_id": "appgdep_6adb5b0fba608191bb8161c735f96dd1",
+    "deployment_status": "succeeded",
+    "archive_reference": {
+      "sediment_file_id": "file_00000000014081f9928eb16dcf7f695c",
+      "format": "tar",
+      "sha256": "734b20da7e8af7d2d2492e69cd2ed76a7b1fe700244574765c0399e8ecfd7bf2"
+    },
+    "archive_downloaded": false,
+    "restore_tested": false,
+    "pre_deployment_backup_on_github": false
+  },
+  "automatic_sites_update_allowed": false
+}
