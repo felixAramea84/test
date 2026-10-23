@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-23T15:51:00+02:00",
+  "site_project_id": "appgprj_6adb5adde3a0819186797112638e6c1d",
+  "site_version_number": 1,
+  "site_version_id": "appgprj_6adb5adde3a0819186797112638e6c1d~appgver_2b3adb6efc1c81919846bd9a91b52a59",
+  "site_source_commit": "7868b213ea3282c2699531842e0478a09195b02e",
+  "github_parent_commit": "2bab1c3afcf6dba100677b1008970c24d42121b5",
+  "github_backup_ref": "refs/heads/feature/rathaus-foto",
+  "files_sha256": {
+    ".openai/hosting.json": "3c2cc34f9e67b1e24f93c167619b0deada951583c0331c22ccc1c718e27a12f6",
+    "dist/index.html": "9689396ea42cdf925d82115c2afae89c3f120d438232d436ea3381638365c94b"
+  },
+  "verification": "Site source clone HEAD equals saved published source SHA; reconstructed tar members byte-compared with git show; deployment files stored in this commit. No live redeployment restore test performed.",
+  "rollback": "Deploy saved Sites version 1, or package .openai/hosting.json and dist/ from this backup commit.",
+  "archive_download": "Original Sediment archive could not be resolved; reconstructed exact static deployment files from verified Git source."
+}
