@@ -1,13 +1,13 @@
 # TODO
 
 ## Next up
-Keine offenen Implementierungsaufgaben. Optionaler Abschluss: PR #1 reviewen/zusammenführen und Foto im autorisierten Browser visuell prüfen.
+Keine offenen Implementierungsaufgaben. Nutzer hat Integration von PR #1 in main beauftragt; Merge nach dieser Dokumentation, finaler Nachweis im Session-Bericht. Optional: Foto im autorisierten Browser visuell prüfen.
 
 ## In progress
 Keine.
 
 ## Blocked
-Keine Implementierung blockiert. Direkter main-Push durch automatische Freigabeprüfung abgelehnt; GitHub-Integration erfolgt über https://github.com/felixAramea84/test/pull/1.
+Keine Implementierung blockiert. Direkter main-Push durch automatische Freigabeprüfung abgelehnt; GitHub-Integration erfolgt nach ausdrücklichem Nutzerauftrag über https://github.com/felixAramea84/test/pull/1.
 
 ## Done
 - [x] T-001 | P1 | DONE | Repository gemäß Projektvorgabe konfigurieren.

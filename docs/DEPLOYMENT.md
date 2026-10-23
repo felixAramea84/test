@@ -39,3 +39,5 @@ Der Sites-Workflow-Helper ist in dieser Ausführungsumgebung nicht installiert u
 ## Veröffentlichtes Rathaus-Update
 
 Version 2: appgprj_6adb5adde3a0819186797112638e6c1d~appgver_2313f71bd6f48191bdd15c1e74f67984. Quellcommit 914d8f89e301d0b4ef341fda682c8e42cf70e46e. Deployment appgdep_6adb673811d88191b6c535b53c291497 succeeded, 2026-10-23 15:55:18 CEST. Lokaler HTTP-/Archiv-Test PASS; direkte Live-HTTP-Prüfung URLError; visuelle Bildprüfung nicht verfügbar. GitHub-Quellstand auf feature/rathaus-foto, PR #1 offen; main wegen abgelehntem Direkt-Push unverändert. Dokumentationscommit nach dem Release braucht keine erneute Sites-Veröffentlichung.
+
+Der Nutzer hat anschließend den Merge von PR #1 in main ausdrücklich beauftragt. Die Integration erfolgt über den PR-Merge; die Merge-SHA wird abschließend remote verifiziert und im Session-Abschlussbericht genannt. Der veröffentlichte Sites-Quellcommit bleibt unverändert 914d8f89e301d0b4ef341fda682c8e42cf70e46e.

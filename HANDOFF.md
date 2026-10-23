@@ -3,13 +3,13 @@ Aktualisiert: 2026-10-23T15:56:45+02:00
 Projekt / Repository / Branch: Test-Website / felixAramea84/test / feature/rathaus-foto
 
 ## Ziel und aktueller Status
-Rathausfoto unter „Nur der HSV“ ergänzen und bestehende Test-Website aktualisieren. Erledigt: Foto implementiert, Quellstand auf GitHub und Sites gesichert, private Sites-Version 2 erfolgreich veröffentlicht. GitHub-Integration als PR #1 offen.
+Rathausfoto unter „Nur der HSV“ ergänzen und bestehende Test-Website aktualisieren. Erledigt: Foto implementiert, Quellstand auf GitHub und Sites gesichert, private Sites-Version 2 erfolgreich veröffentlicht. GitHub-Integration über PR #1; Nutzer hat den Merge in main ausdrücklich beauftragt. Nach dieser Dokumentation wird der geprüfte PR per Merge-Commit integriert und Remote-SHA bestätigt.
 
 ## Erledigte Änderungen (Dateien, Begründung)
 index.html mit responsivem Foto, Alt-Text und Bild-/Lizenznachweis. .openai/hosting.json aus dem bestehenden Sites-Quellstand übernommen. scripts/prepare-static.py erzeugt dist/index.html; diese Datei wird zur reproduzierbaren statischen Veröffentlichung bewusst versioniert. README, TODO, CHANGELOG, Architektur-, Deployment- und Rollback-Dokumentation aktualisiert.
 
 ## GitHub-Sicherung (Commit-SHA, Remote, Push bestätigt: ja/nein)
-Remote https://github.com/felixAramea84/test.git. Vorherige Konfiguration: 2bab1c3afcf6dba100677b1008970c24d42121b5, remote bestätigt. Pre-Deployment-Backup: 3c7de0c47a901482c57ff257c8ba9c3db49c2066 auf feature/rathaus-foto, Push und Remote-SHA bestätigt: ja. Veröffentlichter Quellstand 914d8f89e301d0b4ef341fda682c8e42cf70e46e auf GitHub-Feature-Branch und Sites-Quell-Remote verifiziert. PR https://github.com/felixAramea84/test/pull/1 offen. Abschließender Dokumentationscommit folgt auf demselben Feature-Branch; finale SHA im Session-Abschlussbericht. main bleibt 2bab1c3afcf6dba100677b1008970c24d42121b5.
+Remote https://github.com/felixAramea84/test.git. Vorherige Konfiguration: 2bab1c3afcf6dba100677b1008970c24d42121b5, remote bestätigt. Pre-Deployment-Backup: 3c7de0c47a901482c57ff257c8ba9c3db49c2066 auf feature/rathaus-foto, Push und Remote-SHA bestätigt: ja. Veröffentlichter Quellstand 914d8f89e301d0b4ef341fda682c8e42cf70e46e auf GitHub-Feature-Branch und Sites-Quell-Remote verifiziert. PR https://github.com/felixAramea84/test/pull/1; Merge vom Nutzer ausdrücklich autorisiert. Abschließender Dokumentationscommit folgt auf demselben Feature-Branch; finale SHA im Session-Abschlussbericht. main vor Merge: 2bab1c3afcf6dba100677b1008970c24d42121b5; Abschlussreferenz refs/heads/main und PR #1, finale Merge-SHA im Session-Abschlussbericht.
 
 ## Sites-Status (URL, Umgebung, Live-Version, letzter Deploy)
 https://leere-testseite-fh-231026.arbeitsberei-5761.chatgpt.site
@@ -22,11 +22,11 @@ GitHub-Backup-SHA 3c7de0c47a901482c57ff257c8ba9c3db49c2066. Exakte Deployment-Da
 Backup-Quellabgleich und tar-Roundtrip PASS. Ziel-HTML, Struktur, Archivinhalt, identische Deployment-Dateien und lokaler HTTP-Smoke-Test PASS. Natives Deployment succeeded und gespeicherte Version 2 samt Quell-SHA bestätigt. Direkter Live-HTTP-Smoke-Test wegen URLError in dieser Umgebung nicht möglich; keine visuelle Live-/Mobile-/Bildprüfung behauptet. Build/Formatter/Linter/Typprüfung/Unit/E2E nicht eingerichtet (NOT RUN). Bildquelle und Lizenz über Web geprüft; Wikimedia-Download im Executor durch Netzwerkpolitik blockiert. Foto ist daher extern eingebunden, Ladeprüfung im Executor nicht möglich. Browser-/Mobile-Prüfung gesondert dokumentieren.
 
 ## Offene Punkte und Risiken
-Externe Bildverfügbarkeit hängt von Wikimedia ab. Automatische Freigabeprüfung lehnte direkten GitHub-Push nach main wegen Umgehung des Review-Flows ab; sichere Alternative PR #1 erstellt, main unverändert. Keine Umgehung der Ablehnung. Original-Sediment-Archiv nicht auflösbar; exakte statische Dateien aus verifiziertem Sites-Git rekonstruiert. Sites-Helper fehlt; Git-/tar-Fallback mit nativen Sites-Werkzeugen.
+Externe Bildverfügbarkeit hängt von Wikimedia ab. Automatische Freigabeprüfung lehnte direkten GitHub-Push nach main wegen Umgehung des Review-Flows ab; sichere Alternative PR #1 erstellt, main blieb bei dieser Aktion unverändert. Anschließend erteilte der Nutzer ausdrücklich den Auftrag „merge in main“; Integration nun über PR #1 autorisiert. Original-Sediment-Archiv nicht auflösbar; exakte statische Dateien aus verifiziertem Sites-Git rekonstruiert. Sites-Helper fehlt; Git-/tar-Fallback mit nativen Sites-Werkzeugen.
 
 ## Nächste konkrete Schritte (Reihenfolge)
 1. Bei Bedarf Seite im autorisierten Browser ansehen; externes Foto visuell prüfen.
-2. PR #1 reviewen und zusammenführen; kein Merge automatisch ausgeführt.
+2. Merge-Ergebnis von PR #1 und main-SHA im finalen Session-Bericht bzw. GitHub prüfen.
 3. Vor weiteren Sites-Änderungen neue Live-/Backup-Bestandsaufnahme durchführen.
 
 ## Entscheidungen und Annahmen
